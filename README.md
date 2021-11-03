@@ -23,7 +23,7 @@ A screen that is displayed when the application starts for 700ms.
 #### Bottom navigation
 The navigation of the application is done through the bottom navigation and the fragments.
 
-![1635950890811](https://user-images.githubusercontent.com/60001554/140089547-daecf1d8-2e5c-4af7-82e4-e3beb2848ae9.jpg | width=100)
+![1635950890811](https://user-images.githubusercontent.com/60001554/140089547-daecf1d8-2e5c-4af7-82e4-e3beb2848ae9.jpg&s=200)
 
 #### Login
 Login screen.
