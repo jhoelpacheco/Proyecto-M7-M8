@@ -23,23 +23,22 @@ A screen that is displayed when the application starts for 700ms.
 #### Bottom navigation
 The navigation of the application is done through the bottom navigation and the fragments.
 
-![1635950890811](https://user-images.githubusercontent.com/60001554/140089547-daecf1d8-2e5c-4af7-82e4-e3beb2848ae9.jpg)
+![1635950890811 (1)](https://user-images.githubusercontent.com/60001554/140097684-c4cd3dc6-82ac-41f1-9c0c-7f628d429a51.jpg)
 
 #### Login
 Login screen.
 
-![1635950890816](https://user-images.githubusercontent.com/60001554/140089743-324f6727-10ad-429c-a5f4-1717875e67a4.jpg)
+![1635950890816 (1)](https://user-images.githubusercontent.com/60001554/140097560-e10a2442-e19f-4160-a099-81c941eaf82f.jpg)
 
 #### Fragment List
 Fragment, where all added heroes are displayed in a list.
 
-![1635950890804](https://user-images.githubusercontent.com/60001554/140090279-d51d515a-fefc-43dd-bab6-b4db1c56410b.jpg)
+![1635950890804 (1)](https://user-images.githubusercontent.com/60001554/140097393-d5970767-a48e-4d9c-abca-db4502686a51.jpg)
 
 #### Fragment Form
 Fragment. where is the form to add new heroes.
 
-![1635950890794](https://user-images.githubusercontent.com/60001554/140090641-ac95ab57-83ae-419c-9ffd-21b5d15e890b.jpg)
-
+![1635950890794 (1)](https://user-images.githubusercontent.com/60001554/140097201-58d84629-6760-4142-9e9c-16fcef1da68d.jpg)
 
 ## Technologies
 This project is developed with android studio (java).
