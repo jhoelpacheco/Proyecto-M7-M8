@@ -18,7 +18,7 @@ In my project you'll be able to:
 #### Splash Screen
 A screen that is displayed when the application starts for 700ms
 
-![Test image](https://drive.google.com/file/d/1Qvd8YQZ6auYnDhfKfuxnQjhgAd1g2RnV/view?usp=sharing)
+https://drive.google.com/file/d/1Qvd8YQZ6auYnDhfKfuxnQjhgAd1g2RnV/view?usp=sharing
 
 #### Bottom navigation
 
