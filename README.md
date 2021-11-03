@@ -18,7 +18,7 @@ In my project you'll be able to:
 #### Splash Screen
 A screen that is displayed when the application starts for 700ms.
 
-![1635950890822](https://user-images.githubusercontent.com/60001554/140089383-0a23cc09-e8b9-4abd-94d2-d04adedf23c1.jpg)
+![1635950890822 (1)](https://user-images.githubusercontent.com/60001554/140096824-19827012-de06-4942-a2bf-2fd8b47b1fb3.jpg)
 
 #### Bottom navigation
 The navigation of the application is done through the bottom navigation and the fragments.
