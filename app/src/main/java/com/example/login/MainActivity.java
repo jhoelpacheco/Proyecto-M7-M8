@@ -34,13 +34,12 @@ public class MainActivity extends AppCompatActivity {
         EditText txtPassword = findViewById(R.id.txtPassword);
         Button btnLogin = findViewById(R.id.btnLogin);
 
-        //toast que muestra un mensaje si el login es correcto o no
+        //toast. which shows a message if the login is correct or not
         Context context = this;
         int duration = Toast.LENGTH_SHORT;
 
         CharSequence text_error = "Error. Usuario o contraseña incorrecto!";
         Toast toast_error_login = Toast.makeText(context, text_error, duration);
-
         CharSequence text_correcto = "Login correcto!";
         Toast toast_login_correcto = Toast.makeText(context, text_correcto, duration);
 
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 inputMethodManager.hideSoftInputFromWindow(btnLogin.getWindowToken(), 0);
             }
         });
-
+        //splashscreen, faulty because it won't move
         SystemClock.sleep(700);
         setTheme(R.style.Theme_Login);
     }

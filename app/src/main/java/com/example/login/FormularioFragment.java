@@ -22,12 +22,11 @@ import com.example.login.Model.Hero;
 
 public class FormularioFragment extends Fragment {
 
-    //Create the instance of dbHelper
+    //Create the instance of dbHelper and db
     private HeroesDBHelper dbHelper;
     private SQLiteDatabase db;
-
+    
     public FormularioFragment(){}
-
     public FormularioFragment(HeroesDBHelper dbHelper, SQLiteDatabase db){
         this.dbHelper = dbHelper;
         this.db = db;
@@ -38,76 +37,80 @@ public class FormularioFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_formulario, container, false);
 
+        //text field where the hero's name is entered, spinners to save the role and sub-role, buttons to save new heroes and delete all heroes
         EditText nombre_pj = view.findViewById(R.id.nombre_pj);
+        Spinner spinner_roles = (Spinner) view.findViewById(R.id.roles);
+        Spinner spinner_sub_roles = (Spinner) view.findViewById(R.id.sub_rol);
         Button btn_save = view.findViewById(R.id.btn_save);
         Button btn_delete = view.findViewById(R.id.btn_delete);
 
-        ////////////////////////////////////////////////////////////////////
-        Spinner spinner_roles = (Spinner) view.findViewById(R.id.roles);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
+        //adapters that is responsible for filling the spinners with arrays found in @values/roles.xml
+        ArrayAdapter<CharSequence> adapter_rol = ArrayAdapter.createFromResource(getContext(),
                 R.array.h_roles, android.R.layout.simple_spinner_item);
+        adapter_rol.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_roles.setAdapter(adapter_rol);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_roles.setAdapter(adapter);
-
-        Spinner spinner_sub_roles = (Spinner) view.findViewById(R.id.sub_rol);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(getContext(),
+        ArrayAdapter<CharSequence> adapter_sub_rol = ArrayAdapter.createFromResource(getContext(),
                 R.array.h_sub_roles, android.R.layout.simple_spinner_item);
+        adapter_sub_rol.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_sub_roles.setAdapter(adapter_sub_rol);
 
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_sub_roles.setAdapter(adapter1);
-
-        //toast de error cuando el campo del nombre este vacio
+        //Toast error. displays an error message when the name field is empty
         Context context = getContext();
-        CharSequence text = "Error. campo de nombre del heroe vacio!";
+        CharSequence text_error = "Error. campo nombre del heroe vacio!";
         int duration = Toast.LENGTH_SHORT;
-        Toast toast_nombre_pj = Toast.makeText(context, text, duration);
+        Toast toast_nombre_pj = Toast.makeText(context, text_error, duration);
 
-        //AlertDialog de confirmacion para borrar toda la tabla
+        //Toast
+        CharSequence text_successful = "Se introducio el heroe nuevo correctamente!";
+        Toast toast_nombre_pj_ok = Toast.makeText(context, text_successful, duration);
 
+
+        //AlertDialog. Displays a message asking for a confirmation to remove all heroes from the database.
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Borrar todos los heroes");
         builder.setMessage("¿Estas seguro que quieres borrar todos los heroes de la lista?")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    //when it is given to ok all the heroes are deleted
                     public void onClick(DialogInterface dialog, int id) {
                         dbHelper.delete();
                     }
                 })
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        //no hacer nada
+                        //when canceled it just does nothing
                     }
                 });
         AlertDialog dialog = builder.create();
 
 
 
-        //botones
+        //save button
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
                 if(nombre_pj.getText().toString().equals("")){
-                    //si el campo del nombre del heroe esta vacio, solo se mostrara el toast
-                    //y no se introducira nada
+                    //If the hero's name field is empty, only the toast will be shown and nothing will be entered
                     toast_nombre_pj.show();
                 }else {
+                    //if text is entered, it is saved in the database as a new hero and the name field will be cleared
                     Hero h = new Hero(nombre_pj.getText().toString(),
                             spinner_roles.getSelectedItem().toString(),
                             spinner_sub_roles.getSelectedItem().toString());
                     dbHelper.insertHero(db, h);
                     nombre_pj.setText("");
+                    //and it will also show a toast mentioning that the hero was entered correctly
+                    toast_nombre_pj_ok.show();
                 }
             }
         });
-
+        //delete button. which calls the aforementioned alert dialog
         btn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.show();
             }
         });
-
         return view;
     }
 }

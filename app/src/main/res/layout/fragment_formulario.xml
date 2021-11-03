@@ -11,65 +11,61 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="122dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="39dp">
 
-        <EditText
-            android:id="@+id/nombre_pj"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="292dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+        <TextView
+            android:id="@+id/titulo_formulario"
+            android:layout_width="243dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/big_noodle_titling_oblique"
+            android:text="Formulario para añadir nuevos Heroes"
+            android:textSize="30dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.615"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <Spinner
-            android:id="@+id/roles"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-
-            android:layout_marginTop="392dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.615"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="172dp"
-            android:text="Guardar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.183"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.804" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="84dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/big_noodle_titling_oblique"
             android:text="Eliminar datos"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.833" />
+            app:layout_constraintVertical_bias="0.739" />
 
-        <Spinner
-            android:id="@+id/sub_rol"
+        <TextView
+            android:id="@+id/text_Name_pj"
+            android:layout_width="320dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="184dp"
+            android:fontFamily="@font/big_noodle_titling_oblique"
+            android:text="Nombre del heroe"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nombre_pj"
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="488dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="216dp"
+            android:ems="10"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,37 +73,96 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/text_Name_pj"
-            android:layout_width="320dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="260dp"
-            android:text="Nombre del heroe"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.615"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/text_rol"
             android:layout_width="320dp"
             android:layout_height="30dp"
-            android:layout_marginTop="360dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="284dp"
+            android:fontFamily="@font/big_noodle_titling_oblique"
             android:text="Rol"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.615"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/roles"
+            android:background="@drawable/border"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="312dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/text_sub_rol"
             android:layout_width="320dp"
             android:layout_height="30dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="456dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="392dp"
+            android:fontFamily="@font/big_noodle_titling_oblique"
             android:text="Sub rol"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="172dp"
+            android:layout_marginEnd="256dp"
+            android:fontFamily="@font/big_noodle_titling_oblique"
+            android:text="Guardar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.694" />
+
+        <Spinner
+            android:id="@+id/sub_rol"
+            android:background="@drawable/border"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="424dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="73dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/ow_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.993"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="326dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

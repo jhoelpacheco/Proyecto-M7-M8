@@ -31,7 +31,7 @@ public class Menu extends AppCompatActivity {
 
         BottomNavigationView bottonNav = findViewById(R.id.main_menu);
 
-
+        //dbhelper and db are sent to form and list fragments
         bottonNav.setOnItemSelectedListener(item -> {
             Fragment selectedFragment = null;
             switch (item.getItemId()) {

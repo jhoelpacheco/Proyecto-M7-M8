@@ -42,20 +42,21 @@ public class HeroesDBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
+    //method that drops the entire database and recreates it
     public void delete() {
         SQLiteDatabase db=this.getWritableDatabase();
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(db);
     }
 
-
+    //method that is responsible for entering the data into the database
     public void insertHero(SQLiteDatabase db, Hero h){
         //Check the bd is open
         if (db.isOpen()){
-            //Creation of the register for insert object with the content values
+            //Creation of the register for insert heroes with the content values
             ContentValues values = new ContentValues();
 
-            //Insert the incidence getting all values
             values.put(HeroesEntry.COLUMN_NAME_TITLE, h.getNom());
             db.insert(TABLE_NAME, null, values);
 
@@ -68,12 +69,7 @@ public class HeroesDBHelper extends SQLiteOpenHelper {
             Log.i("sql","Database is closed");
         }
     }
-    /*public void deleteHero(SQLiteDatabase db, Hero h){
-        if (db.isOpen()){
-            db.delete(ContactsEntry.TABLE_NAME, h.getNom() + "=" + h.getNom(), null);
-        }
-    }*/
-
+    //method that is responsible for collecting the data and putting it in the hero matrix
     public ArrayList<Hero> getAllData(SQLiteDatabase db){
         ArrayList<Hero> arrayHeroes = new ArrayList<>();
 

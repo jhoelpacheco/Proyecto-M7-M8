@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class ListaFragment extends Fragment {
 
-    //Create the instance of dbHelper
+    //Create the instance of dbHelper and db
     private HeroesDBHelper dbHelper;
     private SQLiteDatabase db;
 
@@ -39,8 +39,10 @@ public class ListaFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_lista, container, false);
 
+        //hero arraylist that receives all existing heroes in the database
         ArrayList<Hero> arrayHeroes = dbHelper.getAllData(db);
 
+        //a list with all the heroes is displayed
         RecyclerView recyclerView = view.findViewById(R.id.reciclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(arrayHeroes);
         recyclerView.setAdapter(adapter);
