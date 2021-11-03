@@ -18,27 +18,27 @@ In my project you'll be able to:
 #### Splash Screen
 A screen that is displayed when the application starts for 700ms.
 
-![1635950890822](https://user-images.githubusercontent.com/60001554/140089383-0a23cc09-e8b9-4abd-94d2-d04adedf23c1.jpg | width=100)
+![1635950890822](https://user-images.githubusercontent.com/60001554/140089383-0a23cc09-e8b9-4abd-94d2-d04adedf23c1.jpg)
 
 #### Bottom navigation
 The navigation of the application is done through the bottom navigation and the fragments.
 
-![1635950890811](https://user-images.githubusercontent.com/60001554/140089547-daecf1d8-2e5c-4af7-82e4-e3beb2848ae9.jpg&s=200)
+![1635950890811](https://user-images.githubusercontent.com/60001554/140089547-daecf1d8-2e5c-4af7-82e4-e3beb2848ae9.jpg)
 
 #### Login
 Login screen.
 
-![1635950890816](https://user-images.githubusercontent.com/60001554/140089743-324f6727-10ad-429c-a5f4-1717875e67a4.jpg | width=100)
+![1635950890816](https://user-images.githubusercontent.com/60001554/140089743-324f6727-10ad-429c-a5f4-1717875e67a4.jpg)
 
 #### Fragment List
 Fragment, where all added heroes are displayed in a list.
 
-![1635950890804](https://user-images.githubusercontent.com/60001554/140090279-d51d515a-fefc-43dd-bab6-b4db1c56410b.jpg | width=100)
+![1635950890804](https://user-images.githubusercontent.com/60001554/140090279-d51d515a-fefc-43dd-bab6-b4db1c56410b.jpg)
 
 #### Fragment Form
 Fragment. where is the form to add new heroes.
 
-![1635950890794](https://user-images.githubusercontent.com/60001554/140090641-ac95ab57-83ae-419c-9ffd-21b5d15e890b.jpg | width=100)
+![1635950890794](https://user-images.githubusercontent.com/60001554/140090641-ac95ab57-83ae-419c-9ffd-21b5d15e890b.jpg)
 
 
 ## Technologies
