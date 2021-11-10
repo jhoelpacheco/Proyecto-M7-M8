@@ -3,9 +3,13 @@ package com.example.login;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.login.DB.HeroesDBHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,11 +29,14 @@ public class Menu extends AppCompatActivity {
         dbHelper = new HeroesDBHelper(this);
         db = dbHelper.getWritableDatabase();
 
-
         getSupportActionBar().hide();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         BottomNavigationView bottonNav = findViewById(R.id.main_menu);
+
+
+        SharedPreferences prefs= getSharedPreferences("SharedP", Context.MODE_PRIVATE);
+
 
         //dbhelper and db are sent to form and list fragments
         bottonNav.setOnItemSelectedListener(item -> {

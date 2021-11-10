@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jhoel/AndroidStudioProjects/overwatch/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Jhoel/AndroidStudioProjects/overwatch/app/src/main/res/layout/fragment_formulario.xml" value="0.209375" />
+        <entry key="..\:/Users/Jhoel/AndroidStudioProjects/overwatch/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
         <entry key="..\:/Users/richard/StudioProjects/Proyecto-M7-M8/app/src/main/res/drawable-anydpi/ic_arrow_drop_down_black.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/richard/StudioProjects/Proyecto-M7-M8/app/src/main/res/drawable/border.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/richard/StudioProjects/Proyecto-M7-M8/app/src/main/res/drawable/gradient_spinner.xml" value="0.37864583333333335" />
