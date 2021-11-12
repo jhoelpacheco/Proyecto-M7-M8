@@ -1,6 +1,8 @@
 package com.example.login.Model;
 
-public class Hero {
+import java.io.Serializable;
+
+public class Hero implements Serializable {
     String nom;
     String rol;
     String sub_rol;

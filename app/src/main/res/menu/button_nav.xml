@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/nav_home"
-        android:title="Home"
+        android:title="@string/nav_home"
         android:icon="@drawable/ic_home"/>
 
     <item android:id="@+id/nav_lista"
-        android:title="Lista"
+        android:title="@string/nav_list"
         android:icon="@drawable/ic_list"/>
 
     <item android:id="@+id/nav_add"
-        android:title="Formulario"
+        android:title="@string/nav_form"
         android:icon="@drawable/ic_add"/>
 </menu>

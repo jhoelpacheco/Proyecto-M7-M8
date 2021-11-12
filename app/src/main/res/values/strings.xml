@@ -1,5 +1,49 @@
 <resources>
     <string name="app_name">Overwatch</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">hOlA</string>
+
+    <!-- login-->
+    <string name="btn_login">Login</string>
+    <string name="check_login">Remember session</string>
+
+    <!-- Button nav-->
+    <string name="nav_home">Home</string>
+    <string name="nav_list">List</string>
+    <string name="nav_form">Form</string>
+
+    <!-- Fragment form-->
+    <string name="title">Form to add new Heroes</string>
+    <string name="name_hero">Hero name</string>
+    <string name="rol">Rol</string>
+    <string name="sub_rol">Sub rol</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_del">Delete data</string>
+
+    <!-- items array h_roles-->
+    <string name="h_roles_1">DPS</string>
+    <string name="h_roles_2">Support</string>
+    <string name="h_roles_3">Tank</string>
+    <!-- items array h_sub_roles-->
+    <string name="h_sub_roles_1">Projectile</string>
+    <string name="h_sub_roles_2">Hitscan</string>
+    <string name="h_sub_roles_3">Main Tank</string>
+    <string name="h_sub_roles_4">Off Tank</string>
+    <string name="h_sub_roles_5">Main Healer</string>
+    <string name="h_sub_roles_6">Off Healer</string>
+
+    <!-- array spinners-->
+    <string-array name="h_roles">
+        <item>@string/h_roles_1</item>
+        <item>@string/h_roles_2</item>
+        <item>@string/h_roles_3</item>
+    </string-array>
+    <string-array name="h_sub_roles">
+        <item>@string/h_sub_roles_1</item>
+        <item>@string/h_sub_roles_2</item>
+        <item>@string/h_sub_roles_3</item>
+        <item>@string/h_sub_roles_4</item>
+        <item>@string/h_sub_roles_5</item>
+        <item>@string/h_sub_roles_6</item>
+    </string-array>
+    
 </resources>

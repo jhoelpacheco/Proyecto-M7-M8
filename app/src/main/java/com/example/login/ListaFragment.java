@@ -23,6 +23,7 @@ public class ListaFragment extends Fragment {
     //Create the instance of dbHelper and db
     private HeroesDBHelper dbHelper;
     private SQLiteDatabase db;
+    Bundle bundle = new Bundle();
 
     public ListaFragment(){}
 
@@ -41,6 +42,12 @@ public class ListaFragment extends Fragment {
 
         //hero arraylist that receives all existing heroes in the database
         ArrayList<Hero> arrayHeroes = dbHelper.getAllData(db);
+
+        for (int i=0; i<arrayHeroes.size();i++){
+            bundle.putSerializable("Hero", arrayHeroes.get(i));
+        }
+        //Bundle incompleto
+
 
         //a list with all the heroes is displayed
         RecyclerView recyclerView = view.findViewById(R.id.reciclerView);

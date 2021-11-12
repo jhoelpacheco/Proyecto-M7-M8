@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Overwatch</string>
+    <string name="hello_blank_fragment">hOlA</string>
+
+    <!-- login-->
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="check_login">Recordar sesión</string>
+
+    <!-- Button nav-->
+    <string name="nav_home">Home</string>
+    <string name="nav_list">Lista</string>
+    <string name="nav_form">Formulario</string>
+
+    <!-- items array h_roles-->
+    <string name="h_roles_1">Daño</string>
+    <string name="h_roles_2">Soporte</string>
+    <string name="h_roles_3">Tanque</string>
+    <!-- items array h_sub_roles-->
+    <string name="h_sub_roles_1">Proyectil</string>
+    <string name="h_sub_roles_2">Hitscan</string>
+    <string name="h_sub_roles_3">Tanque principal</string>
+    <string name="h_sub_roles_4">Tanque secundario</string>
+    <string name="h_sub_roles_5">Soporte curador</string>
+    <string name="h_sub_roles_6">Soporte ofencivo</string>
+
+    <!-- array spinners-->
+    <string-array name="h_roles">
+        <item>@string/h_roles_1</item>
+        <item>@string/h_roles_2</item>
+        <item>@string/h_roles_1</item>
+    </string-array>
+    <string-array name="h_sub_roles">
+        <item>@string/h_sub_roles_1</item>
+        <item>@string/h_sub_roles_2</item>
+        <item>@string/h_sub_roles_3</item>
+        <item>@string/h_sub_roles_4</item>
+        <item>@string/h_sub_roles_5</item>
+        <item>@string/h_sub_roles_6</item>
+    </string-array>
+    <string name="title">Formulario para añadir nuevos heroes</string>
+    <string name="name_hero">Nombre del heroe</string>
+    <string name="rol">Rol</string>
+    <string name="sub_rol">Sub rol</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_del">Borrar datos</string>
+</resources>

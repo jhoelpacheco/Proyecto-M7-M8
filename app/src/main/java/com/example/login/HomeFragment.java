@@ -1,6 +1,7 @@
 package com.example.login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -27,6 +28,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 editor.clear().commit();
+                startActivity(new Intent(getContext(), MainActivity.class));
             }
         });
         return view;
