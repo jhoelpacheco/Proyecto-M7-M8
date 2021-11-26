@@ -12,6 +12,18 @@
     <string name="nav_list">Lista</string>
     <string name="nav_form">Formulario</string>
 
+    <!-- fragment home -->
+    <string name="btn_log_out">Cerrar sesión</string>
+    <string name="btn_change_language">Cambiar idioma</string>
+    
+    <string-array name="languages">
+        <item>@string/language_english</item>
+        <item>@string/language_spanish</item>
+    </string-array>
+
+    <string name="language_spanish">Español</string>
+    <string name="language_english">Ingles</string>
+
     <!-- items array h_roles-->
     <string name="h_roles_1">Daño</string>
     <string name="h_roles_2">Soporte</string>

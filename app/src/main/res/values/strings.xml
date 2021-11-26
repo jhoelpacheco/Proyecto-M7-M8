@@ -19,6 +19,18 @@
     <string name="btn_save">Save</string>
     <string name="btn_del">Delete data</string>
 
+    <!-- fragment home -->
+    <string name="btn_log_out">Log out</string>
+    <string name="btn_change_language">Change language</string>
+
+    <string-array name="languages_array">
+        <item>@string/language_english</item>
+        <item>@string/language_spanish</item>
+    </string-array>
+    <string name="language_spanish">Spanish</string>
+    <string name="language_english">English</string>
+
+
     <!-- items array h_roles-->
     <string name="h_roles_1">DPS</string>
     <string name="h_roles_2">Support</string>

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                                               @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
                 Toast.makeText(getApplicationContext(),
-                        "Authentication error: " + errString, Toast.LENGTH_SHORT)
+                        "Error de autentificación: " + errString, Toast.LENGTH_SHORT)
                         .show();
             }
 
@@ -59,13 +59,13 @@ public class MainActivity extends AppCompatActivity {
                 super.onAuthenticationSucceeded(result);
                 startActivity(new Intent(getApplicationContext(), Menu.class));
                 Toast.makeText(getApplicationContext(),
-                        "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+                        "Autentificación exitosa", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
-                Toast.makeText(getApplicationContext(), "Authentication failed",
+                Toast.makeText(getApplicationContext(), "Error en la autentificación",
                         Toast.LENGTH_SHORT)
                         .show();
             }
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     toast_login_correcto.show();
                     Log.i("Test", "Login correcte");
 
-                    if(check_login.isChecked()){
+                    if(check_login.isChecked() == true){
                         editor.putBoolean("login", true).commit();
                     }
 

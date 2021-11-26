@@ -37,6 +37,7 @@ public class Menu extends AppCompatActivity {
 
         SharedPreferences prefs= getSharedPreferences("SharedP", Context.MODE_PRIVATE);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
         //dbhelper and db are sent to form and list fragments
         bottonNav.setOnItemSelectedListener(item -> {
@@ -52,7 +53,7 @@ public class Menu extends AppCompatActivity {
                     selectedFragment = new FormularioFragment(dbHelper, db);
                     break;
             }
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
             return true;
         });
     }
