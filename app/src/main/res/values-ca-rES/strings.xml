@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Overwatch</string>
+    <string name="hello_blank_fragment">hOlA</string>
+    <string name="btn_login">Iniciar sessió</string>
+    <string name="check_login">Recordar sessió</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_list">Llista</string>
+    <string name="nav_form">Formulari</string>
+    <string name="title">Formulari per afegir nous herois</string>
+    <string name="name_hero">Nom de l\'heroi</string>
+    <string name="rol">Rol</string>
+    <string name="sub_rol">Sub rol</string>
+    <string name="btn_save">Desa</string>
+    <string name="btn_del">Esborrar dades</string>
+    <string name="btn_log_out">Tancar sessió</string>
+    <string name="btn_change_language">Canviar idioma</string>
+    <string name="btn_save_language">Desa</string>
+    <string name="language_spanish">Espanyol</string>
+    <string name="language_english">Anglès</string>
+    <string name="h_roles_1">Dany</string>
+    <string name="h_roles_2">Suport</string>
+    <string name="h_roles_3">Tanc</string>
+    <string name="h_sub_roles_1">Projectil</string>
+    <string name="h_sub_roles_2">Hitscan</string>
+    <string name="h_sub_roles_3">Tanc principal</string>
+    <string name="h_sub_roles_4">Tanc secundari</string>
+    <string name="h_sub_roles_5">Suport curador</string>
+    <string name="h_sub_roles_6">Suport ofensiu</string>
+    <string name="settings_title">Ajustaments</string>
+    <string name="language_catala">Català</string>
+    <string name="alertD_choose_language">Tria l\'idioma...</string>
+</resources>

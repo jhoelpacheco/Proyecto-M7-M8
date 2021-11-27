@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.login.Model.Hero;
@@ -32,6 +33,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.nom_item.setText(arrayHeroes.get(position).getNom());
         holder.rol_item.setText(arrayHeroes.get(position).getRol());
         holder.sub_rol_item.setText(arrayHeroes.get(position).getSub_rol());
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppCompatActivity activity = (AppCompatActivity)v.getContext();
+                InfoHeroFragment infoHeroFragment = new InfoHeroFragment();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.RW, infoHeroFragment).addToBackStack(null).commit();
+
+                //aun no funciona el fragment que sale cuando se clica un item del recyclerview
+            }
+        });
     }
 
     @Override

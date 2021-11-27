@@ -22,6 +22,7 @@
     <!-- fragment home -->
     <string name="btn_log_out">Log out</string>
     <string name="btn_change_language">Change language</string>
+    <string name="btn_save_language">Save</string>
 
     <string-array name="languages_array">
         <item>@string/language_english</item>
@@ -29,6 +30,7 @@
     </string-array>
     <string name="language_spanish">Spanish</string>
     <string name="language_english">English</string>
+    <string name="language_catala">Catalan</string>
 
 
     <!-- items array h_roles-->
@@ -57,5 +59,9 @@
         <item>@string/h_sub_roles_5</item>
         <item>@string/h_sub_roles_6</item>
     </string-array>
-    
+
+    <!-- Fragment settings -->
+    <string name="settings_title">Settings</string>
+    <string name="alertD_choose_language">Choose Languaje...</string>
+
 </resources>

@@ -1,16 +1,15 @@
 package com.example.login;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.biometric.BiometricPrompt;
-import androidx.core.content.ContextCompat;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -19,9 +18,16 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
+
+import java.util.Locale;
 import java.util.concurrent.Executor;
 
 public class MainActivity extends AppCompatActivity {
+
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
@@ -39,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //SharedPref language
+        SharedPreferences prefsLang = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        String language = prefsLang.getString("Slang", "");
+        setAppLocale(language);
+
 
         //biometric
         executor = ContextCompat.getMainExecutor(this);
@@ -103,7 +115,8 @@ public class MainActivity extends AppCompatActivity {
         CharSequence text_correcto = "Login correcto!";
         Toast toast_login_correcto = Toast.makeText(this, text_correcto, Toast.LENGTH_SHORT);
 
-        SharedPreferences prefs= getSharedPreferences("SharedP", Context.MODE_PRIVATE);
+        //pref, which saves the login credentials
+        SharedPreferences prefs= getSharedPreferences("login_preferencia", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
         if(prefs.getBoolean("login", false) == true){
@@ -117,8 +130,10 @@ public class MainActivity extends AppCompatActivity {
                     toast_login_correcto.show();
                     Log.i("Test", "Login correcte");
 
-                    if(check_login.isChecked() == true){
+                    if(check_login.isChecked()){
                         editor.putBoolean("login", true).commit();
+                    }if (!check_login.isChecked()){
+                        editor.clear().commit();
                     }
 
                     //if the condition is fulfilled we go to the menu screen
@@ -138,4 +153,17 @@ public class MainActivity extends AppCompatActivity {
         SystemClock.sleep(700);
         setTheme(R.style.Theme_Login);
     }
+    private void setAppLocale(String localeCode){
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration config = res.getConfiguration();
+
+        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.JELLY_BEAN_MR1){
+            config.setLocale(new Locale(localeCode.toLowerCase()));
+        } else {
+            config.locale = new Locale(localeCode.toLowerCase());
+        }
+        res.updateConfiguration(config, dm);
+    }
+
 }

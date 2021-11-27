@@ -16,10 +16,11 @@
     <string name="btn_log_out">Cerrar sesión</string>
     <string name="btn_change_language">Cambiar idioma</string>
     
-    <string-array name="languages">
+    <string-array name="languages_array">
         <item>@string/language_english</item>
         <item>@string/language_spanish</item>
     </string-array>
+    <string name="btn_save_language">Guardar</string>
 
     <string name="language_spanish">Español</string>
     <string name="language_english">Ingles</string>
@@ -34,7 +35,7 @@
     <string name="h_sub_roles_3">Tanque principal</string>
     <string name="h_sub_roles_4">Tanque secundario</string>
     <string name="h_sub_roles_5">Soporte curador</string>
-    <string name="h_sub_roles_6">Soporte ofencivo</string>
+    <string name="h_sub_roles_6">Soporte ofensivo</string>
 
     <!-- array spinners-->
     <string-array name="h_roles">
@@ -56,4 +57,9 @@
     <string name="sub_rol">Sub rol</string>
     <string name="btn_save">Guardar</string>
     <string name="btn_del">Borrar datos</string>
+
+    <!-- Fragment settings -->
+    <string name="settings_title">Ajustes</string>
+    <string name="language_catala">Catalán</string>
+    <string name="alertD_choose_language">Elige el idioma...</string>
 </resources>

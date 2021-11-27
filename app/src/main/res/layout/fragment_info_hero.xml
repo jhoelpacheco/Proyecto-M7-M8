@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoHeroFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView_info_fragment"
+        android:layout_width="214dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/t500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_name_fragment_info"
+        android:layout_width="160dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text=""
+        android:textSize="40dp"
+        android:fontFamily="@font/big_noodle_titling_oblique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_rol_fragment_info"
+        android:layout_width="113dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="63dp"
+        android:text=""
+        android:textSize="20dp"
+        android:fontFamily="@font/big_noodle_titling_oblique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name_fragment_info" />
+
+    <TextView
+        android:id="@+id/textView_sub_rol_fragment_info"
+        android:layout_width="113dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="63dp"
+        android:text=""
+        android:textSize="20dp"
+        android:fontFamily="@font/big_noodle_titling_oblique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_rol_fragment_info" />
+</androidx.constraintlayout.widget.ConstraintLayout>
